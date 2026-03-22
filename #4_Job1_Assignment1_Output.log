@@ -1,0 +1,19 @@
+Started by GitHub push by Ameya75
+Running as SYSTEM
+Building remotely on Slave1 in workspace /home/ubuntu/jenkins/workspace/Job1
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /home/ubuntu/jenkins/workspace/Job1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+Checking out Revision 509319e70d415afcea3494cee2185783ccbb93be (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 509319e70d415afcea3494cee2185783ccbb93be # timeout=10
+Commit message: "Assignment_1 commit"
+ > git rev-list --no-walk e244ac43ff6f818c438712cdcb398a3f6a0f3fa7 # timeout=10
+Finished: SUCCESS

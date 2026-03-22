@@ -1,0 +1,19 @@
+Started by GitHub push by Ameya75
+Running as SYSTEM
+Building remotely on Slave2 in workspace /home/ubuntu/jenkins/workspace/Job2
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /home/ubuntu/jenkins/workspace/Job2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 250063e269a5ab2cb2d2a68a4ec39ec8cee03962 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 250063e269a5ab2cb2d2a68a4ec39ec8cee03962 # timeout=10
+Commit message: "Add Jenkinsfile for CI/CD pipeline"
+ > git rev-list --no-walk 6b258cf67e5aa3a12a279e161344fe6ff5ead4db # timeout=10
+Finished: SUCCESS

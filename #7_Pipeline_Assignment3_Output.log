@@ -1,0 +1,112 @@
+Started by GitHub push by Ameya75
+Lightweight checkout support not available, falling back to full checkout.
+Checking out git https://github.com/Ameya75/Jenkins_Basic.git into /var/lib/jenkins/workspace/CI-CD Pipeline@script/8431886c1d06be834d1fa6451a0b69b86432e7b88e23ac8981e1f72abcdc1cd4 to read Jenkinsfile
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/CI-CD Pipeline@script/8431886c1d06be834d1fa6451a0b69b86432e7b88e23ac8981e1f72abcdc1cd4/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/develop
+Seen branch in repository origin/main
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision c0894b19158da57983bff476ac65e40a3a85f6e2 (origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c0894b19158da57983bff476ac65e40a3a85f6e2 # timeout=10
+Commit message: "Recreate Ameya_Dev.txt and corrected Jenkinsfile"
+ > git rev-list --no-walk 78aa83f678ef5ea25653273c5e1769a59481acc0 # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] stage
+[Pipeline] { (Test Deploy)
+[Pipeline] node
+Running on test in /home/ubuntu/jenkins/workspace/CI-CD Pipeline
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision c0894b19158da57983bff476ac65e40a3a85f6e2 (origin/main)
+Commit message: "Recreate Ameya_Dev.txt and corrected Jenkinsfile"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+Stage "Test Deploy" skipped due to when conditional
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Prod Deploy)
+[Pipeline] node
+Running on prod in /home/ubuntu/jenkins/workspace/CI-CD Pipeline
+[Pipeline] {
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision c0894b19158da57983bff476ac65e40a3a85f6e2 (origin/main)
+Commit message: "Recreate Ameya_Dev.txt and corrected Jenkinsfile"
+[Pipeline] withEnv
+[Pipeline] {
+ > git rev-parse --resolve-git-dir /home/ubuntu/jenkins/workspace/CI-CD Pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/develop
+Seen branch in repository origin/main
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c0894b19158da57983bff476ac65e40a3a85f6e2 # timeout=10
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+Fetching changes from the remote Git repository
+Checking out Revision c0894b19158da57983bff476ac65e40a3a85f6e2 (refs/remotes/origin/main)
+Commit message: "Recreate Ameya_Dev.txt and corrected Jenkinsfile"
+[Pipeline] sh
+ > git rev-parse --resolve-git-dir /home/ubuntu/jenkins/workspace/CI-CD Pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/develop
+Seen branch in repository origin/main
+Seen branch in repository origin/master
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c0894b19158da57983bff476ac65e40a3a85f6e2 # timeout=10
++ mkdir -p /home/ubuntu/prod-deploy
+[Pipeline] sh
+ > git rev-parse --resolve-git-dir /home/ubuntu/jenkins/workspace/CI-CD Pipeline/.git # timeout=10
+ > git config remote.origin.url https://github.com/Ameya75/Jenkins_Basic.git # timeout=10
+Fetching upstream changes from https://github.com/Ameya75/Jenkins_Basic.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > git fetch --tags --force --progress -- https://github.com/Ameya75/Jenkins_Basic.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c0894b19158da57983bff476ac65e40a3a85f6e2 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b main c0894b19158da57983bff476ac65e40a3a85f6e2 # timeout=10
++ cp -r Ameya.txt Ameya_Dev.txt Jenkinsfile jenkins_prod.txt /home/ubuntu/prod-deploy/
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] End of Pipeline
+Finished: SUCCESS
