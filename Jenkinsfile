@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Test Deploy') {
             agent { label 'test' }
-            when { branch 'develop' }
+            when {
+                expression { env.GIT_BRANCH == 'origin/develop' }
+            }
             steps {
                 git branch: 'develop',
                     url: 'https://github.com/Ameya75/Jenkins_Basic.git'
@@ -13,7 +15,9 @@ pipeline {
         }
         stage('Prod Deploy') {
             agent { label 'prod' }
-            when { branch 'main' }
+            when {
+                expression { env.GIT_BRANCH == 'origin/main' }
+            }
             steps {
                 git branch: 'main',
                     url: 'https://github.com/Ameya75/Jenkins_Basic.git'
